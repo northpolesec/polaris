@@ -1,0 +1,51 @@
+# This workflow builds and pushes Docker container to GCR and deploys to Cloud Run.
+name: 'Build, Upload & Deploy'
+
+on: workflow_dispatch
+
+jobs:
+  build_image:
+    runs-on: 'ubuntu-latest'
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
+      attestations: write
+    outputs:
+      digest: ${{ steps.push.outputs.digest }}
+    steps:
+      - name: Run only on main
+        if: github.ref != 'refs/heads/main'
+        run: exit 1
+
+      - name: Auth to GCP
+        id: auth
+        uses: 'google-github-actions/auth@6fc4af4b145ae7821d527454aa9bd537d1f2dc5f' # ratchet:google-github-actions/auth@v2
+        with:
+          workload_identity_provider: 'projects/506274265866/locations/global/workloadIdentityPools/github/providers/northpolesec-polaris'
+          project_id: 'polaris-449516'
+
+      - name: 'Login to GCR'
+        uses: docker/login-action@9780b0c442fbb1117ed29e0efdff1e18412f7567 # ratchet:docker/login-action@v3
+        with:
+          registry: gcr.io
+          username: oauth2accesstoken
+          password: ${{ steps.auth.outputs.access_token }}
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@c47758b77c9736f4b2ef4073d4d51994fabfe349 # ratchet:docker/setup-buildx-action@v3
+
+      - name: Build and push
+        id: push
+        uses: docker/build-push-action@48aba3b46d1b1fec4febb7c5d0c644b249a11355 # ratchet:docker/build-push-action@v6
+        with:
+          push: true
+          tags: gcr.io/polaris-449516/polaris/polaris:latest
+
+      - name: Generate artifact attestation
+        uses: actions/attest-build-provenance@7668571508540a607bdfd90a87a560489fe372eb # ratchet:actions/attest-build-provenance@v2
+        with:
+          subject-name: ghcr.io/${{ github.repository }}
+          subject-digest: ${{ steps.push.outputs.digest }}
+          push-to-registry: true
+
