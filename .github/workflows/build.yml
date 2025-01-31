@@ -45,7 +45,7 @@ jobs:
       - name: Generate artifact attestation
         uses: actions/attest-build-provenance@7668571508540a607bdfd90a87a560489fe372eb # ratchet:actions/attest-build-provenance@v2
         with:
-          subject-name: ghcr.io/${{ github.repository }}
+          subject-name: gcr.io/polaris-449516/polaris/polaris
           subject-digest: ${{ steps.push.outputs.digest }}
           push-to-registry: true
 
