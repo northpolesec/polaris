@@ -8,9 +8,9 @@ import (
 	bqStorage "cloud.google.com/go/bigquery/storage/apiv1"
 	"cloud.google.com/go/bigquery/storage/apiv1/storagepb"
 	"cloud.google.com/go/bigquery/storage/managedwriter/adapt"
+	"google.golang.org/api/option"
 	"google.golang.org/protobuf/proto"
 	"google.golang.org/protobuf/types/descriptorpb"
-	"google.golang.org/protobuf/types/known/timestamppb"
 
 	apipb "buf.build/gen/go/northpolesec/protos/protocolbuffers/go/stats"
 )
@@ -21,8 +21,8 @@ type StatsServiceServer struct {
 	streamName  string
 }
 
-func NewStatsServiceServer(projectId, datasetId, tableId, streamId string) (*StatsServiceServer, error) {
-	wc, err := bqStorage.NewBigQueryWriteClient(context.Background())
+func NewStatsServiceServer(projectId, datasetId, tableId, streamId string, opts ...option.ClientOption) (*StatsServiceServer, error) {
+	wc, err := bqStorage.NewBigQueryWriteClient(context.Background(), opts...)
 	if err != nil {
 		return nil, fmt.Errorf("failed to make BigQuery client: %w", err)
 	}
@@ -43,9 +43,6 @@ func NewStatsServiceServer(projectId, datasetId, tableId, streamId string) (*Sta
 }
 
 func (s *StatsServiceServer) SubmitStats(ctx context.Context, req *apipb.SubmitStatsRequest) (*apipb.SubmitStatsResponse, error) {
-	// Set the submission time for this request.
-	req.SetSubmitTime(timestamppb.Now())
-
 	// Get a write stream.
 	ws, err := s.writeClient.GetWriteStream(ctx, &storagepb.GetWriteStreamRequest{Name: s.streamName})
 	if err != nil {
