@@ -27,15 +27,13 @@ jobs:
         with:
           workload_identity_provider: 'projects/506274265866/locations/global/workloadIdentityPools/github/providers/northpolesec-polaris'
           project_id: 'polaris-449516'
-          token_format: access_token
-          service_account: polaris-gar@polaris-449516.iam.gserviceaccount.com
 
       - name: Login to GAR
         uses: docker/login-action@9780b0c442fbb1117ed29e0efdff1e18412f7567 # ratchet:docker/login-action@v3
         with:
-          registry: us-docker.pkg.dev
+          registry: us-central1-docker.pkg.dev
           username: oauth2accesstoken
-          password: ${{ steps.auth.outputs.access_token }}
+          password: ${{ steps.auth.outputs.auth_token }}
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@c47758b77c9736f4b2ef4073d4d51994fabfe349 # ratchet:docker/setup-buildx-action@v3
@@ -45,12 +43,12 @@ jobs:
         uses: docker/build-push-action@48aba3b46d1b1fec4febb7c5d0c644b249a11355 # ratchet:docker/build-push-action@v6
         with:
           push: true
-          tags: us-docker.pkg.dev/polaris-449516/polaris/polaris:latest
+          tags: us-central1-docker.pkg.dev/polaris-449516/polaris/polaris:latest
 
       - name: Generate artifact attestation
         uses: actions/attest-build-provenance@7668571508540a607bdfd90a87a560489fe372eb # ratchet:actions/attest-build-provenance@v2
         with:
-          subject-name: us-docker.pkg.dev/polaris-449516/polaris/polaris
+          subject-name: us-central1-docker.pkg.dev/polaris-449516/polaris/polaris
           subject-digest: ${{ steps.push.outputs.digest }}
           push-to-registry: true
 
