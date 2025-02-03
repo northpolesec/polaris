@@ -1,0 +1,99 @@
+RPCReTxt1
+""
+278
+kind:  REQUEST
+method:  "/google.cloud.bigquery.storage.v1.BigQueryWrite/GetWriteStream"
+message:  {
+  [type.googleapis.com/google.cloud.bigquery.storage.v1.GetWriteStreamRequest]:  {
+    name:  "projects/polaris-449516/datasets/testset/tables/testtable/streams/_default"
+  }
+}
+259
+kind:  RESPONSE
+message:  {
+  [type.googleapis.com/google.cloud.bigquery.storage.v1.WriteStream]:  {
+    name:  "projects/polaris-449516/datasets/testset/tables/testtable/streams/_default"
+    type:  COMMITTED
+    location:  "us-central1"
+  }
+}
+ref_index:  1
+91
+kind:  CREATE_STREAM
+method:  "/google.cloud.bigquery.storage.v1.BigQueryWrite/AppendRows"
+1892
+kind:  SEND
+message:  {
+  [type.googleapis.com/google.cloud.bigquery.storage.v1.AppendRowsRequest]:  {
+    write_stream:  "projects/polaris-449516/datasets/testset/tables/testtable/streams/_default"
+    proto_rows:  {
+      writer_schema:  {
+        proto_descriptor:  {
+          name:  "santa_stats_v1_SubmitStatsRequest"
+          field:  {
+            name:  "machine_id_hash"
+            number:  1
+            label:  LABEL_OPTIONAL
+            type:  TYPE_STRING
+            default_value:  ""
+            json_name:  "machineIdHash"
+          }
+          field:  {
+            name:  "org_id"
+            number:  2
+            label:  LABEL_OPTIONAL
+            type:  TYPE_STRING
+            default_value:  ""
+            json_name:  "orgId"
+          }
+          field:  {
+            name:  "santa_version"
+            number:  3
+            label:  LABEL_OPTIONAL
+            type:  TYPE_STRING
+            default_value:  ""
+            json_name:  "santaVersion"
+          }
+          field:  {
+            name:  "macos_version"
+            number:  4
+            label:  LABEL_OPTIONAL
+            type:  TYPE_STRING
+            default_value:  ""
+            json_name:  "macosVersion"
+          }
+          field:  {
+            name:  "macos_build"
+            number:  5
+            label:  LABEL_OPTIONAL
+            type:  TYPE_STRING
+            default_value:  ""
+            json_name:  "macosBuild"
+          }
+          field:  {
+            name:  "mac_model"
+            number:  6
+            label:  LABEL_OPTIONAL
+            type:  TYPE_STRING
+            default_value:  ""
+            json_name:  "macModel"
+          }
+        }
+      }
+      rows:  {
+        serialized_rows:  "\n@c9bcf04f8d69279ad881b6d9467785ea72d99c561976892d2e39f63b4c1df4b4\x1a\x062025.1\"\x0415.2*\x0624C1012\x07Mac15,7"
+      }
+    }
+    trace_id:  "polaris"
+  }
+}
+ref_index:  3
+243
+kind:  RECV
+message:  {
+  [type.googleapis.com/google.cloud.bigquery.storage.v1.AppendRowsResponse]:  {
+    append_result:  {}
+    write_stream:  "projects/polaris-449516/datasets/testset/tables/testtable/streams/_default"
+  }
+}
+ref_index:  3
