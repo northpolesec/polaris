@@ -28,6 +28,7 @@ jobs:
           token_format: access_token
           workload_identity_provider: 'projects/506274265866/locations/global/workloadIdentityPools/github/providers/northpolesec-polaris'
           project_id: 'polaris-449516'
+          service_account: 'polaris-gcr@polaris-449516.iam.gserviceaccount.com'
 
       - name: 'Login to GCR'
         uses: docker/login-action@9780b0c442fbb1117ed29e0efdff1e18412f7567 # ratchet:docker/login-action@v3
