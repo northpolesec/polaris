@@ -50,7 +50,9 @@ jobs:
         with:
           subject-name: us-central1-docker.pkg.dev/polaris-449516/polaris/polaris
           subject-digest: ${{ steps.push.outputs.digest }}
-          push-to-registry: true
+          # Enable this once GAR can properly accept attestations.
+          # https://issuetracker.google.com/issues/346827093
+          push-to-registry: false
 
       - name: Deploy to Cloud Run
         uses: google-github-actions/deploy-cloudrun@v2
