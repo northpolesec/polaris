@@ -12,11 +12,8 @@ resource "google_iam_workload_identity_pool_provider" "default" {
     "google.subject"       = "assertion.sub"
     "attribute.repository" = "assertion.repository"
   }
-  attribute_condition = <<EOT
-    attribute.repository == "${var.github_repo}" &&
-    assertion.ref == "refs/heads/main" &&
-    assertion.ref_type == "branch"
-EOT
+  attribute_condition = "google.subject == repo:${var.github_repo}:ref:refs/heads/main"
+
   oidc {
     issuer_uri = "https://token.actions.githubusercontent.com"
   }
