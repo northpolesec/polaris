@@ -58,5 +58,5 @@ jobs:
         uses: google-github-actions/deploy-cloudrun@v2
         with:
           service: 'polaris'
-          image: us-central1-docker.pkg.dev/polaris-449516/polaris/polaris@{{ steps.push.outputs.digest }}
+          image: us-central1-docker.pkg.dev/polaris-449516/polaris/polaris@${{ steps.push.outputs.digest }}
 
