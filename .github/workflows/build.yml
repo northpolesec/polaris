@@ -52,3 +52,9 @@ jobs:
           subject-digest: ${{ steps.push.outputs.digest }}
           push-to-registry: true
 
+      - name: Deploy to Cloud Run
+        uses: google-github-actions/deploy-cloudrun@v2
+        with:
+          service: 'polaris'
+          image: us-central1-docker.pkg.dev/polaris-449516/polaris/polaris@{{ steps.push.outputs.digest }}
+
