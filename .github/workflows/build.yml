@@ -25,7 +25,7 @@ jobs:
         id: auth
         uses: 'google-github-actions/auth@6fc4af4b145ae7821d527454aa9bd537d1f2dc5f' # ratchet:google-github-actions/auth@v2
         with:
-          workload_identity_provider: 'projects/506274265866/locations/global/workloadIdentityPools/github/providers/northpolesec-polaris'
+          workload_identity_provider: 'projects/506274265866/locations/global/workloadIdentityPools/github/providers/github'
           project_id: 'polaris-449516'
 
       - name: Login to GAR
