@@ -4,7 +4,7 @@ go 1.23.2
 
 require (
 	buf.build/gen/go/northpolesec/protos/grpc/go v1.5.1-20250205183953-5b8cc4eb768b.2
-	buf.build/gen/go/northpolesec/protos/protocolbuffers/go v1.36.4-20250203152518-4607c0b5a9d6.1
+	buf.build/gen/go/northpolesec/protos/protocolbuffers/go v1.36.5-20250205183953-5b8cc4eb768b.1
 	cloud.google.com/go/bigquery v1.66.2
 	github.com/google/go-replayers/grpcreplay v1.3.0
 	github.com/shoenig/test v1.12.0
