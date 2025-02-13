@@ -5,6 +5,7 @@ import (
 	"flag"
 	"testing"
 
+	"connectrpc.com/connect"
 	"github.com/google/go-replayers/grpcreplay"
 	"github.com/northpolesec/polaris/internal/statsservice"
 	"github.com/shoenig/test/must"
@@ -31,13 +32,13 @@ func TestSubmitStats_SimpleSubmission(t *testing.T) {
 	must.NoError(t, err)
 
 	// Make a single SubmitStats request, verify that it doesn't report an error.
-	_, err = ss.SubmitStats(context.Background(), &apipb.SubmitStatsRequest{
+	_, err = ss.SubmitStats(context.Background(), connect.NewRequest(&apipb.SubmitStatsRequest{
 		SantaVersion:  "2025.1",
 		MachineIdHash: "c9bcf04f8d69279ad881b6d9467785ea72d99c561976892d2e39f63b4c1df4b4",
 		MacosVersion:  "15.2",
 		MacosBuild:    "24C101",
 		MacModel:      "Mac15,7",
-	})
+	}))
 	must.NoError(t, err)
 }
 
