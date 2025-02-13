@@ -1,7 +1,8 @@
 # Polaris
 
 Polaris is the statistics collection server for the Santa client. It receives
-requests over gRPC from the Santa client and publishes the data into BigQuery.
+requests over [ConnectRPC](https://connectrpc.com) from the Santa client and
+publishes the data into BigQuery.
 
 ### Stats collection documentation
 

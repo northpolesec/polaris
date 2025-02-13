@@ -1,6 +1,6 @@
 resource "google_bigquery_dataset" "default" {
-  dataset_id                  = "polaris"
-  description                 = "Dataset containing stats submitted from Santa clients"
+  dataset_id  = "polaris"
+  description = "Dataset containing stats submitted from Santa clients"
 }
 
 resource "google_bigquery_table" "default" {
@@ -31,7 +31,7 @@ resource "google_bigquery_table" "default" {
     "name": "santa_version",
     "type": "STRING",
     "mode": "NULLABLE",
-    "maxLength": "8"
+    "maxLength": "16"
   },
   {
     "name": "macos_version",

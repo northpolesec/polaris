@@ -3,12 +3,14 @@ package main
 import (
 	"log"
 	"net"
+	"net/http"
 	"os"
 
 	"github.com/northpolesec/polaris/internal/statsservice"
-	"google.golang.org/grpc"
+	"golang.org/x/net/http2"
+	"golang.org/x/net/http2/h2c"
 
-	apipb "buf.build/gen/go/northpolesec/protos/grpc/go/stats/statsv1grpc"
+	apipb "buf.build/gen/go/northpolesec/protos/connectrpc/go/stats/statsv1connect"
 )
 
 func main() {
@@ -23,21 +25,19 @@ func main() {
 	streamId := os.Getenv("POLARIS_STREAM_ID")
 
 	// Create server and register StatsService.
-	s := grpc.NewServer()
 	svc, err := statsservice.NewStatsServiceServer(projectId, datasetId, tableId, streamId)
 	if err != nil {
 		log.Fatalf("Failed to create service: %v", err)
 	}
-	apipb.RegisterStatsServiceServer(s, svc)
 
-	// Create listener.
-	lis, err := net.Listen("tcp", net.JoinHostPort("0.0.0.0", port))
-	if err != nil {
-		log.Fatalf("Failed to create listener: %v", err)
-	}
+	mux := http.NewServeMux()
+	mux.Handle(apipb.NewStatsServiceHandler(svc))
 
-	// Serve forever.
-	if err := s.Serve(lis); err != nil {
+	if err := http.ListenAndServe(
+		net.JoinHostPort("0.0.0.0", port),
+		// This wrapping of mux is necessary to make non-TLS HTTP/2 connections work.
+		h2c.NewHandler(mux, &http2.Server{}),
+	); err != nil {
 		log.Fatalf("server failed: %v", err)
 	}
 }

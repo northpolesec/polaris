@@ -4,11 +4,15 @@ import (
 	"context"
 	"fmt"
 	"log"
+	"strings"
 
 	bqStorage "cloud.google.com/go/bigquery/storage/apiv1"
 	"cloud.google.com/go/bigquery/storage/apiv1/storagepb"
 	"cloud.google.com/go/bigquery/storage/managedwriter/adapt"
+	"connectrpc.com/connect"
 	"google.golang.org/api/option"
+	"google.golang.org/grpc/codes"
+	"google.golang.org/grpc/status"
 	"google.golang.org/protobuf/proto"
 	"google.golang.org/protobuf/types/descriptorpb"
 
@@ -42,7 +46,11 @@ func NewStatsServiceServer(projectId, datasetId, tableId, streamId string, opts 
 	}, nil
 }
 
-func (s *StatsServiceServer) SubmitStats(ctx context.Context, req *apipb.SubmitStatsRequest) (*apipb.SubmitStatsResponse, error) {
+func (s *StatsServiceServer) SubmitStats(ctx context.Context, req *connect.Request[apipb.SubmitStatsRequest]) (*connect.Response[apipb.SubmitStatsResponse], error) {
+	if err := validateRequest(req.Msg); err != nil {
+		return nil, status.Errorf(codes.InvalidArgument, "%v", err)
+	}
+
 	// Get a write stream.
 	ws, err := s.writeClient.GetWriteStream(ctx, &storagepb.GetWriteStreamRequest{Name: s.streamName})
 	if err != nil {
@@ -59,7 +67,7 @@ func (s *StatsServiceServer) SubmitStats(ctx context.Context, req *apipb.SubmitS
 	defer stream.CloseSend()
 
 	// Marshal the row data.
-	rows, err := s.appendRowsReqProtoRowsFromSubmitStatsReq(req)
+	rows, err := s.appendRowsReqProtoRowsFromSubmitStatsReq(req.Msg)
 	if err != nil {
 		log.Printf("Failed to create AppendRowsRequest: %v", err)
 		return nil, err
@@ -81,7 +89,7 @@ func (s *StatsServiceServer) SubmitStats(ctx context.Context, req *apipb.SubmitS
 		return nil, err
 	}
 
-	return &apipb.SubmitStatsResponse{}, nil
+	return connect.NewResponse(&apipb.SubmitStatsResponse{}), nil
 }
 
 func (s *StatsServiceServer) appendRowsReqProtoRowsFromSubmitStatsReq(req *apipb.SubmitStatsRequest) (*storagepb.AppendRowsRequest_ProtoRows, error) {
@@ -102,4 +110,20 @@ func (s *StatsServiceServer) appendRowsReqProtoRowsFromSubmitStatsReq(req *apipb
 			},
 		},
 	}, nil
+}
+
+func validateRequest(req *apipb.SubmitStatsRequest) error {
+	if req.GetSantaVersion() == "" {
+		return fmt.Errorf("missing santa_version")
+	}
+	if strings.HasPrefix(req.GetSantaVersion(), "9999.") {
+		return fmt.Errorf("ignoring submission from debug version")
+	}
+	if req.GetMacosVersion() == "" {
+		return fmt.Errorf("missing macos_version")
+	}
+	if req.GetMacosBuild() == "" {
+		return fmt.Errorf("missing macos_build")
+	}
+	return nil
 }
