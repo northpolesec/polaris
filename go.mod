@@ -5,7 +5,7 @@ go 1.23.2
 require (
 	buf.build/gen/go/northpolesec/protos/connectrpc/go v1.18.1-20250214013108-459ace571a4b.1
 	buf.build/gen/go/northpolesec/protos/protocolbuffers/go v1.36.5-20250205183953-5b8cc4eb768b.1
-	cloud.google.com/go/bigquery v1.66.1
+	cloud.google.com/go/bigquery v1.66.2
 	connectrpc.com/connect v1.18.1
 	github.com/google/go-replayers/grpcreplay v1.3.0
 	github.com/shoenig/test v1.12.0
@@ -54,6 +54,6 @@ require (
 	golang.org/x/tools v0.29.0 // indirect
 	golang.org/x/xerrors v0.0.0-20240903120638-7835f813f4da // indirect
 	google.golang.org/genproto v0.0.0-20250122153221-138b5a5a4fd4 // indirect
-	google.golang.org/genproto/googleapis/api v0.0.0-20250124145028-65684f501c47 // indirect
+	google.golang.org/genproto/googleapis/api v0.0.0-20250127172529-29210b9bc287 // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20250207221924-e9438ea467c6 // indirect
 )
