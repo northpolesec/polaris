@@ -11,8 +11,6 @@ import (
 	"cloud.google.com/go/bigquery/storage/managedwriter/adapt"
 	"connectrpc.com/connect"
 	"google.golang.org/api/option"
-	"google.golang.org/grpc/codes"
-	"google.golang.org/grpc/status"
 	"google.golang.org/protobuf/proto"
 	"google.golang.org/protobuf/types/descriptorpb"
 
@@ -48,7 +46,7 @@ func NewStatsServiceServer(projectId, datasetId, tableId, streamId string, opts 
 
 func (s *StatsServiceServer) SubmitStats(ctx context.Context, req *connect.Request[apipb.SubmitStatsRequest]) (*connect.Response[apipb.SubmitStatsResponse], error) {
 	if err := validateRequest(req.Msg); err != nil {
-		return nil, status.Errorf(codes.InvalidArgument, "%v", err)
+		return nil, connect.NewError(connect.CodeInvalidArgument, err)
 	}
 
 	// Get a write stream.
