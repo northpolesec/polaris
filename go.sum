@@ -1,7 +1,7 @@
 buf.build/gen/go/northpolesec/protos/connectrpc/go v1.18.1-20250214013108-459ace571a4b.1 h1:4tvAKKppLzkk34IJAueVelEZEwbk0j2z8EpKL1Qq6Jc=
 buf.build/gen/go/northpolesec/protos/connectrpc/go v1.18.1-20250214013108-459ace571a4b.1/go.mod h1:W4f2+v8uTGKaIqHbAfpVIUufW8ieq1wCIpQBTa360fM=
-buf.build/gen/go/northpolesec/protos/protocolbuffers/go v1.36.5-20250205183953-5b8cc4eb768b.1 h1:0ppYpGGaeWPEkCbMlAnyb8JzRzTzEOuEFcIKpCdMITY=
-buf.build/gen/go/northpolesec/protos/protocolbuffers/go v1.36.5-20250205183953-5b8cc4eb768b.1/go.mod h1:nhgtguJb5Wg2nzlWrhd2MCZqayMQ2gvUKNVV0U0YQHU=
+buf.build/gen/go/northpolesec/protos/protocolbuffers/go v1.36.5-20250214013108-459ace571a4b.1 h1:AjsbB80GYWKwVG7GK+VL0vni5tYBfZyj3tdOw5YeuV4=
+buf.build/gen/go/northpolesec/protos/protocolbuffers/go v1.36.5-20250214013108-459ace571a4b.1/go.mod h1:nhgtguJb5Wg2nzlWrhd2MCZqayMQ2gvUKNVV0U0YQHU=
 cel.dev/expr v0.19.2 h1:V354PbqIXr9IQdwy4SYA4xa0HXaWq1BUPAGzugBY5V4=
 cel.dev/expr v0.19.2/go.mod h1:MrpN08Q+lEBs+bGYdLxxHkZoUSsCp0nSKTs0nTymJgw=
 cloud.google.com/go v0.118.1 h1:b8RATMcrK9A4BH0rj8yQupPXp+aP+cJ0l6H7V9osV1E=
