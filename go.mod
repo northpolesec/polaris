@@ -10,8 +10,7 @@ require (
 	github.com/google/go-replayers/grpcreplay v1.3.0
 	github.com/shoenig/test v1.12.0
 	golang.org/x/net v0.35.0
-	google.golang.org/api v0.221.0
-	google.golang.org/grpc v1.70.0
+	google.golang.org/api v0.222.0
 	google.golang.org/protobuf v1.36.5
 )
 
@@ -55,5 +54,6 @@ require (
 	golang.org/x/xerrors v0.0.0-20240903120638-7835f813f4da // indirect
 	google.golang.org/genproto v0.0.0-20250122153221-138b5a5a4fd4 // indirect
 	google.golang.org/genproto/googleapis/api v0.0.0-20250127172529-29210b9bc287 // indirect
-	google.golang.org/genproto/googleapis/rpc v0.0.0-20250207221924-e9438ea467c6 // indirect
+	google.golang.org/genproto/googleapis/rpc v0.0.0-20250212204824-5a70512c5d8b // indirect
+	google.golang.org/grpc v1.70.0 // indirect
 )
