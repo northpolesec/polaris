@@ -8,7 +8,7 @@ require (
 	cloud.google.com/go/bigquery v1.66.2
 	connectrpc.com/connect v1.18.1
 	github.com/google/go-replayers/grpcreplay v1.3.0
-	github.com/shoenig/test v1.12.0
+	github.com/shoenig/test v1.12.1
 	golang.org/x/net v0.35.0
 	google.golang.org/api v0.223.0
 	google.golang.org/protobuf v1.36.5
