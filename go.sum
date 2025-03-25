@@ -1,7 +1,7 @@
 buf.build/gen/go/northpolesec/protos/connectrpc/go v1.18.1-20250214013108-459ace571a4b.1 h1:4tvAKKppLzkk34IJAueVelEZEwbk0j2z8EpKL1Qq6Jc=
 buf.build/gen/go/northpolesec/protos/connectrpc/go v1.18.1-20250214013108-459ace571a4b.1/go.mod h1:W4f2+v8uTGKaIqHbAfpVIUufW8ieq1wCIpQBTa360fM=
-buf.build/gen/go/northpolesec/protos/protocolbuffers/go v1.36.5-20250214013108-459ace571a4b.1 h1:AjsbB80GYWKwVG7GK+VL0vni5tYBfZyj3tdOw5YeuV4=
-buf.build/gen/go/northpolesec/protos/protocolbuffers/go v1.36.5-20250214013108-459ace571a4b.1/go.mod h1:nhgtguJb5Wg2nzlWrhd2MCZqayMQ2gvUKNVV0U0YQHU=
+buf.build/gen/go/northpolesec/protos/protocolbuffers/go v1.36.6-20250214013108-459ace571a4b.1 h1:izFknLwVa2sp4csnFI1QlYCFnxI+4hRpSXfXYjXPal0=
+buf.build/gen/go/northpolesec/protos/protocolbuffers/go v1.36.6-20250214013108-459ace571a4b.1/go.mod h1:FBt7m8fWzbApjF86jSVgr1Am8bEbUlSHCGeFn6PZh8g=
 cel.dev/expr v0.19.2 h1:V354PbqIXr9IQdwy4SYA4xa0HXaWq1BUPAGzugBY5V4=
 cel.dev/expr v0.19.2/go.mod h1:MrpN08Q+lEBs+bGYdLxxHkZoUSsCp0nSKTs0nTymJgw=
 cloud.google.com/go v0.118.3 h1:jsypSnrE/w4mJysioGdMBg4MiW/hHx/sArFpaBWHdME=
@@ -143,7 +143,7 @@ google.golang.org/genproto/googleapis/rpc v0.0.0-20250313205543-e70fdf4c4cb4 h1:
 google.golang.org/genproto/googleapis/rpc v0.0.0-20250313205543-e70fdf4c4cb4/go.mod h1:LuRYeWDFV6WOn90g357N17oMCaxpgCnbi/44qJvDn2I=
 google.golang.org/grpc v1.71.0 h1:kF77BGdPTQ4/JZWMlb9VpJ5pa25aqvVqogsxNHHdeBg=
 google.golang.org/grpc v1.71.0/go.mod h1:H0GRtasmQOh9LkFoCPDu3ZrwUtD1YGE+b2vYBYd/8Ec=
-google.golang.org/protobuf v1.36.5 h1:tPhr+woSbjfYvY6/GPufUoYizxw1cF/yFoxJ2fmpwlM=
-google.golang.org/protobuf v1.36.5/go.mod h1:9fA7Ob0pmnwhb644+1+CVWFRbNajQ6iRojtC/QF5bRE=
+google.golang.org/protobuf v1.36.6 h1:z1NpPI8ku2WgiWnf+t9wTPsn6eP1L7ksHUlkfLvd9xY=
+google.golang.org/protobuf v1.36.6/go.mod h1:jduwjTPXsFjZGTmRluh+L6NjiWu7pchiJ2/5YcXBHnY=
 gopkg.in/yaml.v3 v3.0.1 h1:fxVm/GzAzEWqLHuvctI91KS9hhNmmWOoWu0XTYJS7CA=
 gopkg.in/yaml.v3 v3.0.1/go.mod h1:K4uyk7z7BCEPqu6E+C64Yfv1cQ7kz7rIZviUmN+EgEM=
