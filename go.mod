@@ -1,6 +1,7 @@
 module github.com/northpolesec/polaris
 
 go 1.23.2
+toolchain go1.24.1
 
 require (
 	buf.build/gen/go/northpolesec/protos/connectrpc/go v1.18.1-20250214013108-459ace571a4b.1
@@ -9,7 +10,7 @@ require (
 	connectrpc.com/connect v1.18.1
 	github.com/google/go-replayers/grpcreplay v1.3.0
 	github.com/shoenig/test v1.12.1
-	golang.org/x/net v0.37.0
+	golang.org/x/net v0.38.0
 	google.golang.org/api v0.228.0
 	google.golang.org/protobuf v1.36.6
 )
