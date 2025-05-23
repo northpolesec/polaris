@@ -5,7 +5,7 @@ go 1.23.2
 toolchain go1.24.1
 
 require (
-	buf.build/gen/go/northpolesec/protos/connectrpc/go v1.18.1-20250502161314-cbd662bd63b9.1
+	buf.build/gen/go/northpolesec/protos/connectrpc/go v1.18.1-20250522195641-97f92d597386.1
 	buf.build/gen/go/northpolesec/protos/protocolbuffers/go v1.36.6-20250522195641-97f92d597386.1
 	cloud.google.com/go/bigquery v1.68.0
 	connectrpc.com/connect v1.18.1
