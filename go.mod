@@ -12,7 +12,7 @@ require (
 	github.com/google/go-replayers/grpcreplay v1.3.0
 	github.com/shoenig/test v1.12.1
 	golang.org/x/net v0.41.0
-	google.golang.org/api v0.240.0
+	google.golang.org/api v0.241.0
 	google.golang.org/protobuf v1.36.6
 )
 
