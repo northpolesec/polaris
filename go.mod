@@ -5,8 +5,8 @@ go 1.23.2
 toolchain go1.24.1
 
 require (
-	buf.build/gen/go/northpolesec/protos/connectrpc/go v1.18.1-20250809010051-088588481f1b.1
-	buf.build/gen/go/northpolesec/protos/protocolbuffers/go v1.36.7-20250809010051-088588481f1b.1
+	buf.build/gen/go/northpolesec/protos/connectrpc/go v1.18.1-20250811191136-756115bc8075.1
+	buf.build/gen/go/northpolesec/protos/protocolbuffers/go v1.36.7-20250811191136-756115bc8075.1
 	cloud.google.com/go/bigquery v1.69.0
 	connectrpc.com/connect v1.18.1
 	github.com/google/go-replayers/grpcreplay v1.3.0
