@@ -6,14 +6,14 @@ toolchain go1.24.1
 
 require (
 	buf.build/gen/go/northpolesec/protos/connectrpc/go v1.18.1-20250816150116-a06eb8aa8621.1
-	buf.build/gen/go/northpolesec/protos/protocolbuffers/go v1.36.7-20250816150116-a06eb8aa8621.1
+	buf.build/gen/go/northpolesec/protos/protocolbuffers/go v1.36.8-20250816150116-a06eb8aa8621.1
 	cloud.google.com/go/bigquery v1.69.0
 	connectrpc.com/connect v1.18.1
 	github.com/google/go-replayers/grpcreplay v1.3.0
 	github.com/shoenig/test v1.12.1
 	golang.org/x/net v0.43.0
 	google.golang.org/api v0.248.0
-	google.golang.org/protobuf v1.36.7
+	google.golang.org/protobuf v1.36.8
 )
 
 require (
