@@ -1,8 +1,6 @@
 module github.com/northpolesec/polaris
 
-go 1.24.0
-
-toolchain go1.24.1
+go 1.25.0
 
 require (
 	buf.build/gen/go/northpolesec/protos/connectrpc/go v1.18.1-20250917010213-e7ace7a67dc8.1

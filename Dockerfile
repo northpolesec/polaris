@@ -1,7 +1,7 @@
 # syntax=docker.io/docker/dockerfile:1
 
 # Build the Go server
-FROM golang:1.23.3-alpine AS go_builder
+FROM golang:1.25.0-alpine AS go_builder
 WORKDIR /app
 COPY go.* ./
 ENV GOMODCACHE=/.cache/go-mod
