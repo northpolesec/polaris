@@ -10,7 +10,7 @@ import (
 	"golang.org/x/net/http2"
 	"golang.org/x/net/http2/h2c"
 
-	apipb "buf.build/gen/go/northpolesec/protos/connectrpc/go/stats/statsv1connect"
+	apipb "buf.build/gen/go/northpolesec/protos/connectrpc/gosimple/stats/statsv1connect"
 )
 
 func main() {

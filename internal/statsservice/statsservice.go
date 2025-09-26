@@ -44,8 +44,8 @@ func NewStatsServiceServer(projectId, datasetId, tableId, streamId string, opts 
 	}, nil
 }
 
-func (s *StatsServiceServer) SubmitStats(ctx context.Context, req *connect.Request[apipb.SubmitStatsRequest]) (*connect.Response[apipb.SubmitStatsResponse], error) {
-	if err := validateRequest(req.Msg); err != nil {
+func (s *StatsServiceServer) SubmitStats(ctx context.Context, req *apipb.SubmitStatsRequest) (*apipb.SubmitStatsResponse, error) {
+	if err := validateRequest(req); err != nil {
 		return nil, connect.NewError(connect.CodeInvalidArgument, err)
 	}
 
@@ -65,7 +65,7 @@ func (s *StatsServiceServer) SubmitStats(ctx context.Context, req *connect.Reque
 	defer stream.CloseSend()
 
 	// Marshal the row data.
-	rows, err := s.appendRowsReqProtoRowsFromSubmitStatsReq(req.Msg)
+	rows, err := s.appendRowsReqProtoRowsFromSubmitStatsReq(req)
 	if err != nil {
 		log.Printf("Failed to create AppendRowsRequest: %v", err)
 		return nil, err
@@ -87,7 +87,7 @@ func (s *StatsServiceServer) SubmitStats(ctx context.Context, req *connect.Reque
 		return nil, err
 	}
 
-	return connect.NewResponse(&apipb.SubmitStatsResponse{}), nil
+	return &apipb.SubmitStatsResponse{}, nil
 }
 
 func (s *StatsServiceServer) appendRowsReqProtoRowsFromSubmitStatsReq(req *apipb.SubmitStatsRequest) (*storagepb.AppendRowsRequest_ProtoRows, error) {
