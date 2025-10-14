@@ -1,5 +1,5 @@
-buf.build/gen/go/northpolesec/protos/connectrpc/gosimple v1.19.1-20251010195328-d4130b11e006.1 h1:QCW950CExz1nAkvoMuoI31eEwzOzRFRqQHxrb0cgfz8=
-buf.build/gen/go/northpolesec/protos/connectrpc/gosimple v1.19.1-20251010195328-d4130b11e006.1/go.mod h1:q4OFpLhJ4QvrHL8dpn6vNYic7LKVbZAHz+2t3oRRrPM=
+buf.build/gen/go/northpolesec/protos/connectrpc/gosimple v1.19.1-20251010195328-d4130b11e006.2 h1:PqTKdPs8rFy7DX47uuj8RkjetBJSSuo35cgar738MhI=
+buf.build/gen/go/northpolesec/protos/connectrpc/gosimple v1.19.1-20251010195328-d4130b11e006.2/go.mod h1:q4OFpLhJ4QvrHL8dpn6vNYic7LKVbZAHz+2t3oRRrPM=
 buf.build/gen/go/northpolesec/protos/protocolbuffers/go v1.36.10-20251010195328-d4130b11e006.1 h1:TY5YHXaZ4n89cFd+6qMmhpp8NwDTPa6fToFCgTytrWM=
 buf.build/gen/go/northpolesec/protos/protocolbuffers/go v1.36.10-20251010195328-d4130b11e006.1/go.mod h1:a/4OuSNp5FA2FbdmBWkyxUzg5QFGpKb6B207ztqIY+0=
 cel.dev/expr v0.24.0 h1:56OvJKSH3hDGL0ml5uSxZmz3/3Pq4tJ+fb1unVLAFcY=
