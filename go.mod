@@ -3,8 +3,8 @@ module github.com/northpolesec/polaris
 go 1.25.0
 
 require (
-	buf.build/gen/go/northpolesec/protos/connectrpc/gosimple v1.19.1-20251219210828-f488345d5b9c.2
-	buf.build/gen/go/northpolesec/protos/protocolbuffers/go v1.36.11-20251219210828-f488345d5b9c.1
+	buf.build/gen/go/northpolesec/protos/connectrpc/gosimple v1.19.1-20251222234036-85229a4bd2f9.2
+	buf.build/gen/go/northpolesec/protos/protocolbuffers/go v1.36.11-20251222234036-85229a4bd2f9.1
 	cloud.google.com/go/bigquery v1.72.0
 	connectrpc.com/connect v1.19.1
 	github.com/google/go-replayers/grpcreplay v1.3.0
