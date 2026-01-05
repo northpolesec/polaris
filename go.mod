@@ -1,6 +1,6 @@
 module github.com/northpolesec/polaris
 
-go 1.25.0
+go 1.25
 
 require (
 	buf.build/gen/go/northpolesec/protos/connectrpc/gosimple v1.19.1-20251231011917-2be19f0ccd02.2
