@@ -15,7 +15,7 @@ RUN --mount=type=cache,target="/.cache/go-mod" \
     go build ./cmd/polaris
 
 # Production image
-FROM alpine AS runner
+FROM gcr.io/distroless/static-debian13
 WORKDIR /app
 COPY --from=go_builder /app/polaris ./polaris
 
