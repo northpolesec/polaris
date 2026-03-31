@@ -5,7 +5,7 @@ go 1.25.0
 require (
 	buf.build/gen/go/northpolesec/protos/connectrpc/gosimple v1.19.1-20260326144950-888cda048913.2
 	buf.build/gen/go/northpolesec/protos/protocolbuffers/go v1.36.11-20260326144950-888cda048913.1
-	cloud.google.com/go/bigquery v1.74.0
+	cloud.google.com/go/bigquery v1.75.0
 	connectrpc.com/connect v1.19.1
 	github.com/google/go-replayers/grpcreplay v1.3.0
 	github.com/shoenig/test v1.12.2
