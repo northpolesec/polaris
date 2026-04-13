@@ -5,7 +5,7 @@ go 1.25.0
 require (
 	buf.build/gen/go/northpolesec/protos/connectrpc/gosimple v1.19.1-20260406161402-f189dc325e5c.2
 	buf.build/gen/go/northpolesec/protos/protocolbuffers/go v1.36.11-20260406161402-f189dc325e5c.1
-	cloud.google.com/go/bigquery v1.75.0
+	cloud.google.com/go/bigquery v1.76.0
 	connectrpc.com/connect v1.19.1
 	github.com/google/go-replayers/grpcreplay v1.3.0
 	github.com/shoenig/test v1.12.2
@@ -19,7 +19,7 @@ require (
 	cloud.google.com/go/auth v0.20.0 // indirect
 	cloud.google.com/go/auth/oauth2adapt v0.2.8 // indirect
 	cloud.google.com/go/compute/metadata v0.9.0 // indirect
-	cloud.google.com/go/iam v1.5.3 // indirect
+	cloud.google.com/go/iam v1.7.0 // indirect
 	github.com/apache/arrow/go/v15 v15.0.2 // indirect
 	github.com/cespare/xxhash/v2 v2.3.0 // indirect
 	github.com/felixge/httpsnoop v1.0.4 // indirect
@@ -54,7 +54,7 @@ require (
 	golang.org/x/tools v0.43.0 // indirect
 	golang.org/x/xerrors v0.0.0-20240903120638-7835f813f4da // indirect
 	google.golang.org/genproto v0.0.0-20260319201613-d00831a3d3e7 // indirect
-	google.golang.org/genproto/googleapis/api v0.0.0-20260319201613-d00831a3d3e7 // indirect
+	google.golang.org/genproto/googleapis/api v0.0.0-20260401024825-9d38bb4040a9 // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20260401024825-9d38bb4040a9 // indirect
 	google.golang.org/grpc v1.80.0 // indirect
 )
