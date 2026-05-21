@@ -6,7 +6,7 @@ require (
 	buf.build/gen/go/northpolesec/protos/connectrpc/gosimple v1.19.2-20260512171310-ee8b2b41a12d.1
 	buf.build/gen/go/northpolesec/protos/protocolbuffers/go v1.36.11-20260512171310-ee8b2b41a12d.1
 	cloud.google.com/go/bigquery v1.77.0
-	connectrpc.com/connect v1.19.2
+	connectrpc.com/connect v1.20.0
 	github.com/google/go-replayers/grpcreplay v1.3.0
 	github.com/shoenig/test v1.13.2
 	golang.org/x/net v0.54.0
