@@ -1,16 +1,16 @@
 module github.com/northpolesec/polaris
 
-go 1.25.0
+go 1.25.8
 
 require (
-	buf.build/gen/go/northpolesec/protos/connectrpc/gosimple v1.20.0-20260521232859-f93a767cda46.1
-	buf.build/gen/go/northpolesec/protos/protocolbuffers/go v1.36.11-20260521232859-f93a767cda46.1
+	buf.build/gen/go/northpolesec/protos/connectrpc/gosimple v1.20.0-20260526203532-5fa0f460d5a5.1
+	buf.build/gen/go/northpolesec/protos/protocolbuffers/go v1.36.11-20260526203532-5fa0f460d5a5.1
 	cloud.google.com/go/bigquery v1.77.0
 	connectrpc.com/connect v1.20.0
 	github.com/google/go-replayers/grpcreplay v1.3.0
 	github.com/shoenig/test v1.13.2
 	golang.org/x/net v0.55.0
-	google.golang.org/api v0.280.0
+	google.golang.org/api v0.281.0
 	google.golang.org/protobuf v1.36.11
 )
 
@@ -30,7 +30,7 @@ require (
 	github.com/google/go-cmp v0.7.0 // indirect
 	github.com/google/s2a-go v0.1.9 // indirect
 	github.com/google/uuid v1.6.0 // indirect
-	github.com/googleapis/enterprise-certificate-proxy v0.3.15 // indirect
+	github.com/googleapis/enterprise-certificate-proxy v0.3.16 // indirect
 	github.com/googleapis/gax-go/v2 v2.22.0 // indirect
 	github.com/klauspost/compress v1.16.7 // indirect
 	github.com/klauspost/cpuid/v2 v2.2.5 // indirect
@@ -55,6 +55,6 @@ require (
 	golang.org/x/xerrors v0.0.0-20240903120638-7835f813f4da // indirect
 	google.golang.org/genproto v0.0.0-20260319201613-d00831a3d3e7 // indirect
 	google.golang.org/genproto/googleapis/api v0.0.0-20260401024825-9d38bb4040a9 // indirect
-	google.golang.org/genproto/googleapis/rpc v0.0.0-20260511170946-3700d4141b60 // indirect
+	google.golang.org/genproto/googleapis/rpc v0.0.0-20260523011958-0a33c5d7ca68 // indirect
 	google.golang.org/grpc v1.81.1 // indirect
 )
