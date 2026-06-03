@@ -1,7 +1,7 @@
-buf.build/gen/go/northpolesec/protos/connectrpc/gosimple v1.20.0-20260526203532-5fa0f460d5a5.1 h1:EfvT/M05ZCBokNH+NBAowILf6SebRXzgwFf+SUl+nw0=
-buf.build/gen/go/northpolesec/protos/connectrpc/gosimple v1.20.0-20260526203532-5fa0f460d5a5.1/go.mod h1:V/+JhY9mzeQUgMcfB5aKXtP+1ljo4sA3B1lD5UdC+30=
-buf.build/gen/go/northpolesec/protos/protocolbuffers/go v1.36.11-20260526203532-5fa0f460d5a5.1 h1:kyHd5gauCS6zgbIFx1/4/dedr1LncUlWCZdgM7nwyC8=
-buf.build/gen/go/northpolesec/protos/protocolbuffers/go v1.36.11-20260526203532-5fa0f460d5a5.1/go.mod h1:OfafKwDkrVDn7wb5tOCm86GmO5v23MErKzv+H9ZcOts=
+buf.build/gen/go/northpolesec/protos/connectrpc/gosimple v1.20.0-20260603215734-da0bbab1e6ae.1 h1:S1sTxTS4p+MnClz+Atmhul0iZMOeszQyZr3v9Stj3rI=
+buf.build/gen/go/northpolesec/protos/connectrpc/gosimple v1.20.0-20260603215734-da0bbab1e6ae.1/go.mod h1:nTNn/NYV5SIx9Tf2Kskk2gt6HExPjnxPtvkgdwdNcJY=
+buf.build/gen/go/northpolesec/protos/protocolbuffers/go v1.36.11-20260603215734-da0bbab1e6ae.1 h1:Aeh3ThVxvusfzCJJEotZ5L53THf9VSWIF0MbplLyLmg=
+buf.build/gen/go/northpolesec/protos/protocolbuffers/go v1.36.11-20260603215734-da0bbab1e6ae.1/go.mod h1:OfafKwDkrVDn7wb5tOCm86GmO5v23MErKzv+H9ZcOts=
 cel.dev/expr v0.25.1 h1:1KrZg61W6TWSxuNZ37Xy49ps13NUovb66QLprthtwi4=
 cel.dev/expr v0.25.1/go.mod h1:hrXvqGP6G6gyx8UAHSHJ5RGk//1Oj5nXQ2NI02Nrsg4=
 cloud.google.com/go v0.123.0 h1:2NAUJwPR47q+E35uaJeYoNhuNEM9kM8SjgRgdeOJUSE=
@@ -139,8 +139,8 @@ golang.org/x/xerrors v0.0.0-20240903120638-7835f813f4da h1:noIWHXmPHxILtqtCOPIhS
 golang.org/x/xerrors v0.0.0-20240903120638-7835f813f4da/go.mod h1:NDW/Ps6MPRej6fsCIbMTohpP40sJ/P/vI1MoTEGwX90=
 gonum.org/v1/gonum v0.17.0 h1:VbpOemQlsSMrYmn7T2OUvQ4dqxQXU+ouZFQsZOx50z4=
 gonum.org/v1/gonum v0.17.0/go.mod h1:El3tOrEuMpv2UdMrbNlKEh9vd86bmQ6vqIcDwxEOc1E=
-google.golang.org/api v0.281.0 h1:sohYgszGGg3zC0P6ncdV6J9IOBtN9LVfFKz8C9tTtJU=
-google.golang.org/api v0.281.0/go.mod h1:6Wssta4c5n9qHq5CBhmlai5h/PUa1djdDAIhYEHyvcM=
+google.golang.org/api v0.283.0 h1:0lkp8u0MPwJVHqRL+nJlMAoZVVzbmiXmFHXMOTmSPik=
+google.golang.org/api v0.283.0/go.mod h1:6Wssta4c5n9qHq5CBhmlai5h/PUa1djdDAIhYEHyvcM=
 google.golang.org/genproto v0.0.0-20260319201613-d00831a3d3e7 h1:XzmzkmB14QhVhgnawEVsOn6OFsnpyxNPRY9QV01dNB0=
 google.golang.org/genproto v0.0.0-20260319201613-d00831a3d3e7/go.mod h1:L43LFes82YgSonw6iTXTxXUX1OlULt4AQtkik4ULL/I=
 google.golang.org/genproto/googleapis/api v0.0.0-20260401024825-9d38bb4040a9 h1:VPWxll4HlMw1Vs/qXtN7BvhZqsS9cdAittCNvVENElA=
